@@ -1,4 +1,4 @@
-import '../styles/globals.css'
+import '../app/global.css'
 
 export default function login(params) {
    return(
