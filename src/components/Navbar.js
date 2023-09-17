@@ -61,7 +61,7 @@ export default function Navbar() {
           <Link href="/orders" className="p-2 hover:text-yellow-400">
             Mis Ordenes
           </Link>
-          <Link href="#" className="p-2 hover:text-yellow-400 flex space-x-2">
+          <Link href="/cart" className="p-2 hover:text-yellow-400 flex space-x-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               height="1em"
