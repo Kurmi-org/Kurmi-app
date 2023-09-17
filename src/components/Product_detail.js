@@ -3,35 +3,32 @@ import Image from "next/image";
 
 export default function ProductDetail() {
     return (
-        <div>
-            <h1 className="p-3 text-center mt-2 font-bold text-4xl uppercase">
+        <div className="flex flex-col items-center mt-5">
+            <h1 className="p-3 text-center mt-2 font-bold text-2xl uppercase">
                 Nombre del Producto
             </h1>
-            <div className="w-screen flex justify-center mt-3">
-                <div className="w-4/5 h-2/4 flex flex-row flex-wrap p-4 bg-amber-800 rounded-lg">
-                    <div className="w-80">
-                        <Image
-                            src="/public/img/papas.jpg"
-                            alt="-.."
-                            width={100}
-                            height={100}
-                            className="rounded-lg h-full w-full"
-                        />
+            <div className="bg-lime-200 w-4/6 border-t border-x border-lime-500 rounded-lg shadow-2xl shadow-lime-900/50 md:flex md:h-80">
+                <div className="flex flex-col items-center p-2 md:flex-row">
+                    <Image
+                        src="/img/asd.jpg"
+                        width={320}
+                        height={100}
+                        alt="..."
+                        className="rounded-lg shadow-2xl shadow-black-900/50 md:w-96"
+                    />
+                </div>
+                <div className="flex flex-col items-center mt-2 md:grid md:grid-row content-center">
+                    <div className="w-5/6 md:justify-self-center">
+                        <p>Descripcion: son las mejores papas cultivadas en la granja</p>
+                        <p>Cantidad disponible: 70 u.</p>
+                        <p>Precio/u: Bs 40.00</p>
                     </div>
-                    <div className="flex-1 bg-white mx-5 w-20 text-center flex flex-col ">
-                        <div>
-                            <p className="p-4">
-                                asdsadsadsadasasdasda sdasda sdsaaaaaaaaaaaaaaa aaaaaaaaaaaaaa
-                                aaaaaaaaaaaa aaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaaa
-                                aaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaa
-                            </p>
-                        </div>
-                        <div className="flex-end">
-                            <button>Agregar Carrito</button>
-                            <button>Ver infrmacion del productor</button>
-                        </div>
+                    <div className="text-white flex space-x-3 p-5 md:justify-self-center">
+                        <button className="bg-lime-800 p-2 rounded-lg font-bold hover:bg-lime-700">Agregar al Carrito</button>
+                        <button className="bg-lime-800 p-2 rounded-lg font-bold hover:bg-lime-700">info Productor</button>
                     </div>
                 </div>
+
             </div>
         </div>
     );
