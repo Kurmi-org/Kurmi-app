@@ -1,19 +1,22 @@
-
 import Image from "next/image";
-import Link from "next/link"
+import Link from "next/link";
 
 export default function ProductCard(props) {
   return (
-    <div className="max-w-sm mx-2 mt-5 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-      <a href="#">
-        <Image className="rounded-t-lg" src="/img/descarga.jpg" width={600} height={400} alt="..." />
-      </a>
+    <div className="w-5/6 md:max-w-sm mt-5 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+      <Image
+        className="rounded-t-lg"
+        src="/next.config.jspublic/img/papas.jpg"
+        width={200}
+        height={200}
+        alt="..."
+      />
+
       <div className="p-5">
-        <a href="#">
-          <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-            Noteworthy technology acquisitions 2021
-          </h5>
-        </a>
+        <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+          Noteworthy technology acquisitions 2021
+        </h5>
+
         <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
           Here are the biggest enterprise technology acquisitions of 2021 so
           far, in reverse chronological order.

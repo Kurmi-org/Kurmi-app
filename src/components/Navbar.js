@@ -1,70 +1,102 @@
+"use client";
 import Link from "next/link";
+import { useState } from "react";
 
 export default function Navbar() {
+  let [openMenu, setOpenMenu] = useState(false);
+  let [openSearch, setOpenSearch] = useState(false);
+
   return (
-    <nav className="bg-green-700 border-gray-200 dark:bg-green-700">
-      <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-        <Link href="/" className="flex items-center">
-          <img
-            src="https://flowbite.com/docs/images/logo.svg"
-            className="h-8 mr-3"
-            alt="Flowbite Logo"
-          />
-          <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-            KURMI
-          </span>
-        </Link>
-        <div className="hidden w-full md:block md:w-auto" id="navbar-default">
-          <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-5 md:mt-0 md:border-0 md:bg-green-700 dark:bg-green-700 md:dark:bg-green-700 dark:border-gray-700">
-            <li className="py-2">
-              <Link
-                href="/"
-                className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-yellow-200 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-                aria-current="page"
-              >
-                Inicio
-              </Link>
-            </li>
-            <li className="py-2">
-              <Link
-                href="#"
-                className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-yellow-200 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-              >
-                Sobre Nosotros
-              </Link>
-            </li>
-            <li className="py-2">
-              <Link
-                href="/orders"
-                className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-yellow-200 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-              >
-                Ordenes
-              </Link>
-            </li>
-            <li className="py-2">
-              <Link
-                href="/request"
-                className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-yellow-200 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-              >
-                Pedidos
-              </Link>
-            </li>
-            <li>
-              <button
-                type="button"
-                className="text-white focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0 dark:bg-yellow-600 dark:hover:bg-yellow-700"
-              >
-                Login
-              </button>
-              <button
-                type="button"
-                className="text-white ml-2 focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0 dark:bg-stone-900 dark:hover:bg-stone-950"
-              >
-                Registro
-              </button>
-            </li>
-          </ul>
+    <nav className="bg-green-700 sticky top-0 ">
+      <div className="md:flex relative md:justify-around">
+        <div className="p-4 flex justify-between">
+          {/* menu button */}
+          <div
+            onClick={() => setOpenMenu(!openMenu)}
+            className="cursor-pointer md:hidden"
+          >
+            <svg
+              className="stroke-1 hover:stroke-2"
+              xmlns="http://www.w3.org/2000/svg"
+              height="1.8em"
+              viewBox="0 0 448 512"
+            >
+              <path d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z" />
+            </svg>
+          </div>
+
+          {/* Name and Logo Kurmi */}
+          <Link href="/">
+            <span className="text-2xl font-bold dark:text-white">KURMI</span>
+          </Link>
+
+          {/* search button */}
+          <div
+            onClick={() => setOpenSearch(!openSearch)}
+            className="cursor-pointer md:hidden"
+          >
+            <svg
+              className="stroke-1 hover:stroke-2"
+              xmlns="http://www.w3.org/2000/svg"
+              height="1.8em"
+              viewBox="0 0 512 512"
+            >
+              <path d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z" />
+            </svg>
+          </div>
         </div>
+
+        {/* Menu Links nav */}
+        <div
+          className={`bg-green-700 flex flex-col
+      items-center text-white text-lg md:flex-row
+      ${openMenu ? "hidden" : ""}`}
+        >
+          <Link href="/" className="p-2 hover:text-yellow-400">
+            Home
+          </Link>
+          <Link href="#" className="p-2 hover:text-yellow-400">
+            Sobre Nosotros
+          </Link>
+          <Link href="/orders" className="p-2 hover:text-yellow-400">
+            Mis Ordenes
+          </Link>
+          <Link href="#" className="p-2 hover:text-yellow-400 flex space-x-2">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="1em"
+              viewBox="0 0 576 512"
+              className="mt-1"
+            >
+              <path d="M528.12 301.319l47.273-208C578.806 78.301 567.391 64 551.99 64H159.208l-9.166-44.81C147.758 8.021 137.93 0 126.529 0H24C10.745 0 0 10.745 0 24v16c0 13.255 10.745 24 24 24h69.883l70.248 343.435C147.325 417.1 136 435.222 136 456c0 30.928 25.072 56 56 56s56-25.072 56-56c0-15.674-6.447-29.835-16.824-40h209.647C430.447 426.165 424 440.326 424 456c0 30.928 25.072 56 56 56s56-25.072 56-56c0-22.172-12.888-41.332-31.579-50.405l5.517-24.276c3.413-15.018-8.002-29.319-23.403-29.319H218.117l-6.545-32h293.145c11.206 0 20.92-7.754 23.403-18.681z" />
+            </svg>
+            <p>Carrito</p>
+          </Link>
+        </div>
+      </div>
+
+      {/* search spacing */}
+      <div
+        className={`flex flex-col
+      items-center p-5 ${openSearch ? "hidden" : ""}`}
+      >
+       <div className="flex flex-row">
+       <input
+          type="text"
+          className="rounded-full opacity-70 h-8 w-56 p-4 md:w-96"
+          placeholder="que estas buscando..."
+        />
+        <div>
+        <svg
+              className="stroke-1 hover:stroke-2 mt-1 mx-2"
+              xmlns="http://www.w3.org/2000/svg"
+              height="1.2em"
+              viewBox="0 0 512 512"
+            >
+              <path d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z" />
+            </svg>
+        </div>
+       </div>
       </div>
     </nav>
   );
