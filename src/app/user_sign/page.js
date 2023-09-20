@@ -1,4 +1,4 @@
-import '../app/global.css'
+import '@/app/global.css'
 
 export default function user_sign(params) {
    return(
