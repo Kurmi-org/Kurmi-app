@@ -2,6 +2,8 @@ import '@/app/global.css'
 
 export default function user_sign(params) {
    return(
+    <section class="bg-gray-50  dark:bg-green-400">
+    <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
     <form class="w-full max-w-lg">
     <div class="flex flex-wrap -mx-3 mb-6">
       <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
@@ -53,5 +55,7 @@ export default function user_sign(params) {
  </div>
     </div>
   </form>
+  </div>
+  </section>
     )
 };

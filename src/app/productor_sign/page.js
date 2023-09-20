@@ -2,6 +2,8 @@ import '@/app/global.css'
 
 export default function productor_sign(params) {
    return(
+    <section class="bg-gray-50  dark:bg-green-400">
+    <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
     <div class="max-w-sm rounded overflow-hidden shadow-lg">
     <form class="w-full max-w-lg">
     <div class="flex flex-wrap -mx-3 mb-6">
@@ -70,5 +72,7 @@ export default function productor_sign(params) {
     </div>
   </form>
   </div>
+  </div>
+  </section>
     )
 };
