@@ -1,5 +1,5 @@
-import CartProduct from "@/components/Cart_product";
-import CartSale from "@/components/Cart_sale";
+import CartProduct from "@/app/components/Cart_product";
+import CartSale from "@/app/components/Cart_sale";
 import Link from "next/link";
 
 export default function Cart() {
