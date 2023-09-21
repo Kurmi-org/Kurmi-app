@@ -1,4 +1,4 @@
-import Orders_P from "@/components/Orders"
+import Orders_P from "@/app/components/Orders"
 
 export default function Orders(){
     return(

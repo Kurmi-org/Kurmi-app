@@ -1,5 +1,5 @@
-import './globals.css'
-import Navbar from '@/components/Navbar'
+import './global.css'
+import Navbar from './components/Navbar.js'
 
 export const metadata = {
   title: 'Home',
