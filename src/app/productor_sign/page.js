@@ -1,4 +1,4 @@
-import '@/global.css'
+import '@/app/global.css'
 
 export default function productor_sign(params) {
    return(
