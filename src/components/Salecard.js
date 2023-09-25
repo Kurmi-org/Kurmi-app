@@ -1,17 +1,29 @@
-<div
-  class="block rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
-  <div
-    class="border-b-2 border-neutral-100 px-6 py-3 dark:border-neutral-600 dark:text-neutral-50">
-    70 kilos de nose
-  </div>
-  <div class="p-6">
-    <h5
-      class="mb-2 text-xl font-medium leading-tight text-neutral-800 dark:text-neutral-50">
-      Special title treatment
-    </h5>
-    <p class="mb-4 text-base text-neutral-600 dark:text-neutral-200">
-     contenido pedido.
-    </p>
-   
-  </div>
-</div>
+import Image from "next/image";
+import Link from "next/link";
+
+export default function ProductCard(props) {
+  return (
+    <div className="w-9/6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+      
+
+      <div className="p-2">
+        <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+          Noteworthy technology acquisitions 2021
+        </h5>
+
+        <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
+          pago 
+          
+          <Link
+          href="/productdetail"
+          className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+        >
+          Ver Mas
+        </Link>
+        </p>
+       
+      </div>
+     
+    </div>
+  );
+}
