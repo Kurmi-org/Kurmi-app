@@ -1,6 +1,6 @@
 'use client'
-const prod_cart = [1, 2, 3, 4, 5, 6];
 export default function CartProduct(params) {
+    const prod_cart = [1, 2, 3, 4, 5, 6];
     return (
         <div className="table w-full rounded-lg shadow-2xl shadow-lime-900/50">
             <div className="table-header-group">
