@@ -3,14 +3,16 @@ import Link from "next/link";
 
 export default function ProductCard(props) {
   return (
-    <div className="w-5/6 md:max-w-sm mt-5 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+    <div className="w-4/6 md:max-w-sm mt-5 border-t-4 border-yellow-300 rounded-lg shadow bg-green-900 shadow-2xl shadow-lime-900/50">
+      <div className="flex justify-center mt-8">
       <Image
-        className="rounded-t-lg"
-        src="/next.config.jspublic/img/papas.jpg"
-        width={200}
+        className="rounded-lg md:w-5/6"
+        src="/img/papas.jpg"
+        width={300}
         height={200}
         alt="..."
       />
+      </div>
 
       <div className="p-5">
         <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
