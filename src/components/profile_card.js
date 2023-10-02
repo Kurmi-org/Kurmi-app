@@ -1,40 +1,46 @@
-import Link from "next/link";
-export default function profile_card(params) {
+import Image from "next/image"
+import CartProduct from "./Cart_product"
+
+export default function Profile_producer(params) {
     return (
-        <div class="flex items-center h-screen w-full justify-center">
-        <div class="max-w-xs">
-            <div class="bg-white shadow-xl rounded-lg py-3">
-                <div class="photo-wrapper p-2">
-                    <img class="w-32 h-32 rounded-full mx-auto" src="https://www.gravatar.com/avatar/2acfb745ecf9d4dccb3364752d17f65f?s=260&d=mp" alt="John Doe"/>
-                </div>
-                <div class="p-2">
-                    <h3 class="text-center text-xl text-gray-900 font-medium leading-8">Joh Doe</h3>
-                    <div class="text-center text-gray-400 text-xs font-semibold">
-                        <p>Web Developer</p>
+        <div className="w-6/6 flex justify-center">
+            <div className=" w-6/6 md:w-4/6 flex flex-col justify-center">
+                <h1 className="text-center text-2xl md:text-4xl font-bold uppercase mt-4">Perfil</h1>
+                {/* card */}
+                <div className="flex justify-center">
+                    <div className="flex bg-yellow-400 w-6/6 md:w-3/6 flex flex-col justify-center m-4 pt-8 pb-8 rounded-xl">
+                        <div className="flex justify-center">
+                            <Image src="/img/user.png"
+                                width={200}
+                                height={200}
+                                alt="..."
+                                className="rounded-xl w-2/6 md:w-2/6" />
+                        </div>
+                        <div className="flex flex-col items-center pt-4 text-center text-sm md:text-lg font-semibold">
+                            <p>
+                                Nombre: <span>Juan Ramirez</span>
+                            </p>
+                            <p>
+                                Ocupacion: <span>Granjero</span>
+                            </p>
+                            <p>
+                                Otro: <span>Dato</span>
+                            </p>
+                            <p>
+                                Otro: <span>Dato</span>
+                            </p>
+                        </div>
                     </div>
-                    <table class="text-xs my-3">
-                        <tbody><tr>
-                            <td class="px-2 py-2 text-gray-500 font-semibold">Address</td>
-                            <td class="px-2 py-2">Chatakpur-3, Dhangadhi Kailali</td>
-                        </tr>
-                        <tr>
-                            <td class="px-2 py-2 text-gray-500 font-semibold">Phone</td>
-                            <td class="px-2 py-2">+977 9955221114</td>
-                        </tr>
-                        <tr>
-                            <td class="px-2 py-2 text-gray-500 font-semibold">Email</td>
-                            <td class="px-2 py-2">john@exmaple.com</td>
-                        </tr>
-                    </tbody></table>
-        
-                    <div class="text-center my-3">
-                        <a class="text-xs text-indigo-500 italic hover:underline hover:text-indigo-600 font-medium" href="#">View Profile</a>
-                    </div>
-        
                 </div>
+                {/* end card */}
+
+                {/* list of products */}
+                <div>
+                    <h1 className="text-xl md:text-2xl p-3 font-bold">Otros Productos</h1>
+                    <CartProduct />
+                </div>
+                {/* end list */}
             </div>
         </div>
-        
-        </div>
-    );
-}
+    )
+};

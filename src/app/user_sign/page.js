@@ -2,8 +2,17 @@ import '@/app/global.css'
 
 export default function user_sign(params) {
    return(
+   
     <section class="bg-gray-50  dark:bg-green-400">
+       <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
+        
+        <div class="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-orange-400 dark:border-green-700">
+     
+        <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
     <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
+    <a href="#" class="flex items-center mb-6 text-2xl font-semibold text-gray-900 dark:text-white">
+           KUrmi    
+        </a>
     <form class="w-full max-w-lg">
     <div class="flex flex-wrap -mx-3 mb-6">
       <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
@@ -56,6 +65,10 @@ export default function user_sign(params) {
     </div>
   </form>
   </div>
+  </div>
+  </div>
+</div>
   </section>
+
     )
 };
