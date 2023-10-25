@@ -1,8 +1,8 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import urlApi from '@/config/globals_api'
 import { useState, useEffect } from 'react'
-import ProductCard from "@/components/Product_card";
 
 export default function ProductDetail(props) {
 
@@ -39,7 +39,7 @@ export default function ProductDetail(props) {
                     </div>
                     <div className="text-white flex space-x-3 p-5 md:justify-self-center">
                         <button className="bg-lime-800 p-2 rounded-lg font-bold hover:bg-lime-700">Agregar al Carrito</button>
-                        <button className="bg-lime-800 p-2 rounded-lg font-bold hover:bg-lime-700">info Productor</button>
+                        <Link href={`/productores_profile/${product.producer}`} className="bg-lime-800 p-2 rounded-lg font-bold hover:bg-lime-700">info Productor</Link>
                     </div>
                 </div>
 
