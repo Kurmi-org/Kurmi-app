@@ -72,6 +72,12 @@ export default function Navbar() {
             </svg>
             <p>Carrito</p>
           </Link>
+          <Link href="/login" className="p-2 hover:text-yellow-400">
+            Iniciar sesión
+          </Link>
+          <Link href="/user_sign" className="p-2 hover:text-yellow-400">
+            Registrarse
+          </Link>
         </div>
       </div>
 
