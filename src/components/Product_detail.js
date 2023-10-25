@@ -33,6 +33,7 @@ export default function ProductDetail(props) {
                 <div className="flex flex-col items-center mt-2 md:grid md:grid-row content-center">
                     <div className="w-5/6 md:justify-self-center">
                         <p>Descripcion: {product.description}</p>
+                        <p>Tipo: {product.type}</p>
                         <p>Cantidad disponible: {product.stock} u</p>
                         <p>Precio/u: Bs {product.price}.00</p>
                     </div>
