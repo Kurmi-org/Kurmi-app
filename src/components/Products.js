@@ -11,7 +11,7 @@ export default function Products(props) {
   const [products, setProducts] = useState([])
 
   useEffect(() => {
-    fetch(urlApi + '/getProduct')
+    fetch(urlApi + '/getProducts')
     .then(res => res.json())
     .then(data => setProducts(data))
     .catch(error => console.error('Error ->', error))
