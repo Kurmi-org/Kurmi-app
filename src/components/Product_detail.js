@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 
-export default function ProductDetail() {
+export default function ProductDetail({props}) {
     return (
         <div className="flex flex-col items-center mt-5">
             <h1 className="p-3 text-center mt-2 font-bold text-2xl uppercase">
