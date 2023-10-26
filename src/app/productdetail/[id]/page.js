@@ -5,7 +5,7 @@ export default function ProductsDetail({ params }) {
   const {id} = params
 
   return (
-    <div>
+    <div className="mb-8">
       <ProductDetail _id={id}/>
     </div>
   )

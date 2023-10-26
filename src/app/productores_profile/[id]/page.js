@@ -5,6 +5,8 @@ export default function productor_profile({params}) {
   const {id} = params
 
   return (
-    <Productorcard _id={id}/>
+    <div className="mb-8">
+      <Productorcard _id={id}/>
+    </div>
   )
 }
