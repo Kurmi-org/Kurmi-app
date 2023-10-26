@@ -9,6 +9,7 @@ export default function registro_producto() {
     descripcion: '',
   });
 
+
   const handleSubmit = async () => {
     try {
       const response = await fetch(urlApi, {
@@ -34,7 +35,7 @@ export default function registro_producto() {
   const handleChange = (e) => {
     const { name, value } = e.target;
     setProducto({
-      ...producto,
+      ...product,
       [name]: value,
     });
   };
@@ -50,7 +51,7 @@ export default function registro_producto() {
             <input
               type="text"
               name="nombre"
-              value={producto.nombre}
+              value={product.name}
               onChange={handleChange}
               className="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
               placeholder="nombre del producto*"
@@ -58,7 +59,7 @@ export default function registro_producto() {
             <input
               type="number"
               name="precio"
-              value={producto.precio}
+              value={product.price}
               onChange={handleChange}
               className="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
               placeholder="precio*"
@@ -66,7 +67,7 @@ export default function registro_producto() {
             <input
               type="text"
               name="tipo"
-              value={producto.tipo}
+              value={product.type}
               onChange={handleChange}
               className="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
               placeholder="tipo"
@@ -84,7 +85,7 @@ export default function registro_producto() {
             <textarea
               placeholder="descripcion*"
               name="descripcion"
-              value={producto.descripcion}
+              value={product.description}
               onChange={handleChange}
               className="w-full h-32 bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
             ></textarea>
