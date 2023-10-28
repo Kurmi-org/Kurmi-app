@@ -3,14 +3,14 @@ import Image from "next/image";
 import Link from "next/link";
 import urlApi from '@/config/globals_api'
 import { useState, useEffect, useSyncExternalStore } from 'react'
-import { productsCart, arr_prod_card } from '@/config/addCart'
+import { productsCart } from '@/config/addCart'
 import { set } from "react-hook-form";
 
 export default function ProductDetail(props) {
 
     const [product, setProduct] = useState({})
     const [popUp, setBoolPopUp] = useState(false)
-    const [quantity, setQuantity] = useState(0)
+    const [quantity, setQuantity] = useState(1)
 
     //quantity change
     const handleQuanrity = async (e) => {
