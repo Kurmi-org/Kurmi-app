@@ -1,7 +1,8 @@
+'use client'
 import { useState } from 'react';
 import urlApi from '@/config/globals_api'
 export default function registro_producto() {
-  const [producto, setProducto] = useState({
+  const [product, setProducto] = useState({
     nombre: '',
     precio: 0,
     tipo: '',
@@ -75,7 +76,7 @@ export default function registro_producto() {
             <input
               type="number"
               name="stock"
-              value={producto.stock}
+              value={product.stock}
               onChange={handleChange}
               className="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
               placeholder="stock*"
