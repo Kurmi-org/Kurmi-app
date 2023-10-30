@@ -58,7 +58,7 @@ export default function Navbar() {
           <Link href="#" className="p-2 hover:text-yellow-400">
             Sobre Nosotros
           </Link>
-          <Link href="/orders" className="p-2 hover:text-yellow-400">
+          <Link href="/orderlist/client" className="p-2 hover:text-yellow-400">
             Mis Ordenes
           </Link>
           <Link href="/cart" className="p-2 hover:text-yellow-400 flex space-x-2">

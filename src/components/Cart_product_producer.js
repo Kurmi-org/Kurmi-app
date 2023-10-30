@@ -27,18 +27,18 @@ export default function CartProductProducer(props) {
             <div className="table-row-group">
                 {products.map((product) => (
                     <div className="table-row" key={1}>
-                    <div className="table-cell p-3 bg-lime-200">{product.name}</div>
-                    <div className="table-cell p-3 text-center">{product.stock}</div>
-                    <div className="table-cell p-3 text-center bg-lime-200">Bs. {product.price}.00</div>
-                    <div className="table-cell p-1">
-                    <Link
-          href={`/productdetail/${product._id}`}
-          className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-        >
-          Ver Mas
-        </Link>
+                        <div className="table-cell p-3 bg-lime-200">{product.name}</div>
+                        <div className="table-cell p-3 text-center">{product.stock}</div>
+                        <div className="table-cell p-3 text-center bg-lime-200">Bs. {product.price}.00</div>
+                        <div className="table-cell p-1">
+                            <Link
+                                href={`/productdetail/${product._id}`}
+                                className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                            >
+                                Ver Mas
+                            </Link>
+                        </div>
                     </div>
-                </div>
                 ))}
             </div>
         </div>
