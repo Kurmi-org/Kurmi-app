@@ -3,6 +3,8 @@ import '@/app/global.css';
 import { useState } from 'react';
 import { loginRequest } from '../api/auth.js';
 
+import { getProductCart } from '@/config/addCart'
+
 
 export default function login() {
 
@@ -13,6 +15,7 @@ export default function login() {
         e.preventDefault();
         try {
             const res = await loginRequest({ user, password });
+            getProductCart()
             console.log(res);
         }catch (error) {
             console.log("Error", error.response.data);
